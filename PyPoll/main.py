@@ -23,7 +23,6 @@ with open(csvpath, encoding = 'utf') as csvfile:
     for row in csvreader:
         total_votes.append(row[2])
     total_vote_count = len(total_votes)
-    print(total_vote_count)
 
     # create a list of candidates
     candidate_list = []
