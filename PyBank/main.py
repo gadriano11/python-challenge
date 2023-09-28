@@ -15,8 +15,8 @@ csvpath = os.path.join('Resources', 'budget_data.csv')
 with open(csvpath, encoding = 'utf') as csvfile:
     # read csv file
     csvreader = csv.reader(csvfile, delimiter = ',')
-    # skip header
-    next(csvreader)
+    # read and store the header row
+    header = next(csvreader)
     # skip first month from for loop
     budget_data = [next(csvreader)]
     # set initial amount of profit/loss

@@ -16,7 +16,7 @@ with open(csvpath, encoding = 'utf') as csvfile:
     # read csv file
     csvreader = csv.reader(csvfile, delimiter = ',')
     # skip header
-    next(csvreader)
+    header = next(csvreader)
 
     # compute for total number of votes cast
     total_votes = []
